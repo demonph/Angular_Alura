@@ -1,0 +1,19 @@
+<table class="tabela">
+  <thead class="tabela__cabecalho">
+    <th class="tabela__cabecalho__conteudo">Data</th>
+    <th class="tabela__cabecalho__conteudo">Valor</th>
+    <th class="tabela__cabecalho__conteudo">Destino</th>
+  </thead>
+  <tbody *ngIf="trasnferir.length > 0; else listaVazia">
+    <tr class="tabela__linha" *ngFor="let trasnferir of trasnferir">
+      <td class="tabela__conteudo">{{ trasnferir?.data | date: "short" }}</td>
+      <td class="tabela__conteudo">
+        {{ trasnferir?.valueTransfer | currency }}
+      </td>
+      <td class="tabela__conteudo">{{ trasnferir?.destiny }}</td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #listaVazia>
+  <p>Nenhuma operação cadastrada</p>
+</ng-template>

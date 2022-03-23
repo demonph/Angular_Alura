@@ -1,3 +1,4 @@
+import { BankServiceService } from './../service/bankService.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -10,7 +11,6 @@ export class NewTransferComponent implements OnInit {
 
   public valueTransfer: number = 0;
   public destiny: number = 0;
-  constructor() {}
 
   ngOnInit(): void {}
 

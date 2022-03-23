@@ -1,3 +1,4 @@
+import { BankServiceService } from './service/bankService.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,14 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bytebank';
-  value: number = 0;
-  destiny: number = 0;
-  constructor() {}
+  constructor(private service: BankServiceService) {}
 
   ngOnInit(): void {}
 
   trasnfer($event: any) {
-    this.destiny = $event.destiny;
-    this.value = $event.valueTransfer;
+    this.service.trasnfer($event);
   }
 }

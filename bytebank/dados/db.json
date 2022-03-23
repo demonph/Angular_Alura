@@ -1,0 +1,16 @@
+{
+  "transferencia": [
+    {
+      "id": 1,
+      "valueTransfer": 35,
+      "destiny": "3215-3",
+      "data": "2022-11-06T21:34:17.155Z"
+    },
+    {
+      "id": 2,
+      "valueTransfer": 333,
+      "destiny": "32315-3",
+      "data": "2022-11-06T21:34:17.155Z"
+    }
+  ]
+}
