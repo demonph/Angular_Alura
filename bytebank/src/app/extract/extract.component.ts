@@ -12,8 +12,14 @@ export class ExtractComponent implements OnInit {
   constructor(private service: BankServiceService) {}
 
   ngOnInit(): void {
-    this.trasnferir = this.service.getTransfer();
+    this.getTransfer();
   }
 
-
+  getTransfer() {
+    this.service.totalList().subscribe((resp) => {
+      if (resp) {
+        this.trasnferir = resp;
+      }
+    });
+  }
 }

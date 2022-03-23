@@ -8,11 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bytebank';
-  constructor(private service: BankServiceService) {}
+
+  constructor() {}
 
   ngOnInit(): void {}
-
-  trasnfer($event: any) {
-    this.service.trasnfer($event);
-  }
 }
